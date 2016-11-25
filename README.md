@@ -105,7 +105,7 @@ Promise.all(promises).then((array) => console.log(array)) // [1,2,3,4,5]
 
 ### Constructor
 
-- AsyncStreamWriter(stream)
+- AsyncStreamReader(stream)
 
 ### Methods
 
