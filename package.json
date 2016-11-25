@@ -1,7 +1,7 @@
 {
-  "name": "async-streams",
+  "name": "serial-stream",
   "version": "0.0.1",
-  "description": "Read and write from streams in an asyncronous serial fashion",
+  "description": "Read and write from streams in a serial fashion",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,21 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alancnet/async-streams.git"
+    "url": "git+https://github.com/alancnet/serial-stream.git"
   },
   "keywords": [
     "stream",
     "buffer",
     "read",
     "write",
-    "async"
+    "async",
+    "serial"
   ],
   "author": "Alan Colon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alancnet/async-streams/issues"
+    "url": "https://github.com/alancnet/serial-stream/issues"
   },
-  "homepage": "https://github.com/alancnet/async-streams#readme",
+  "homepage": "https://github.com/alancnet/serial-stream#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "memory-streams": "^0.1.0",

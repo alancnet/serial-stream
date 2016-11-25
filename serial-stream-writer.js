@@ -1,4 +1,4 @@
-class AsyncStreamWriter {
+class SerialStreamWriter {
   constructor(stream) {
     this.stream = stream;
   }
@@ -48,4 +48,4 @@ class AsyncStreamWriter {
   }
 }
 
-module.exports = AsyncStreamWriter;
+module.exports = SerialStreamWriter;

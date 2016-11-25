@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 const memoryStreams = require('memory-streams');
-const AsyncStreamReader = require('../async-stream-reader');
-const AsyncStreamWriter = require('../async-stream-writer');
+const SerialStreamReader = require('../serial-stream-reader');
+const SerialStreamWriter = require('../serial-stream-writer');
 const stream = require('stream');
 
 describe('read/write', () => {
@@ -16,8 +16,8 @@ describe('read/write', () => {
         callback();
       }
     })
-    ret.reader = new AsyncStreamReader(s);
-    ret.writer = new AsyncStreamWriter(s);
+    ret.reader = new SerialStreamReader(s);
+    ret.writer = new SerialStreamWriter(s);
     return ret;
   }
   it('should read/write strings', (done) => {

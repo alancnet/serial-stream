@@ -1,4 +1,4 @@
-# async-streams
+# serial-stream
 
 ### Abstract
 
@@ -10,10 +10,10 @@ for Node, using Promises.
 ### Writing streams
 
 ```javascript
-const AsyncStreamWriter = require('async-streams').AsyncStreamWriter;
+const SerialStreamWriter = require('serial-stream').SerialStreamWriter;
 const stream = <Some Stream>;
 
-const writer = new AsyncStreamWriter(stream);
+const writer = new SerialStreamWriter(stream);
 writer.writeInt32LE(123);
 writer.writeDoubleLE(123.45);
 writer.writeString("Hello World");
@@ -35,10 +35,10 @@ value returned from the callback function will override what is resolved by the
 promise.
 
 ```javascript
-const AsyncStreamReader = require('async-streams').AsyncStreamReader;
+const SerialStreamReader = require('serial-stream').SerialStreamReader;
 const stream = <Some Stream>;
 
-const reader = new AsyncStreamReader(stream);
+const reader = new SerialStreamReader(stream);
 reader.readInt32LE((v) => console.log(v));
 reader.readDoubleLE().then(console.log);
 reader.readString((str) => str.toUpperCase())
@@ -69,11 +69,11 @@ for (var i = 0; i < length; i++) {
 Promise.all(promises).then((array) => console.log(array)) // [1,2,3,4,5]
 ```
 
-## AsyncStreamWriter
+## SerialStreamWriter
 
 ### Constructor
 
-- AsyncStreamWriter(stream)
+- SerialStreamWriter(stream)
 
 ### Methods
 
@@ -101,11 +101,11 @@ Promise.all(promises).then((array) => console.log(array)) // [1,2,3,4,5]
 - writeUIntBE(value, byteLength)
 - writeUIntLE(value, byteLength)
 
-## AsyncStreamReader
+## SerialStreamReader
 
 ### Constructor
 
-- AsyncStreamReader(stream)
+- SerialStreamReader(stream)
 
 ### Methods
 

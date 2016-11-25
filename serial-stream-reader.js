@@ -1,5 +1,5 @@
 const BufferChunker = require('./buffer-chunker');
-class AsyncStreamReader{
+class SerialStreamReader{
   constructor(stream) {
     this.stream = stream;
     this._bc = new BufferChunker();
@@ -43,4 +43,4 @@ class AsyncStreamReader{
   }
 }
 
-module.exports = AsyncStreamReader;
+module.exports = SerialStreamReader;
