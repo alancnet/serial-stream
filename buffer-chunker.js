@@ -16,11 +16,11 @@ class BufferChunker extends Writable {
     // Save a COPY of the incoming data.
     this._buffers.push(Buffer.from(chunk));
     this._eval();
-    callback();
+    if (callback) callback();
   }
   _writev(chunks, callback) {
-    chunks.foreach((chunk) => this._write(chunk.chunk, chunk.encoding));
-    callback();
+    chunks.forEach((chunk) => this._write(chunk.chunk, chunk.encoding));
+    if (callback) callback();
   }
   _status() {
     return `buffer: ${this._buffer && this._buffer.toString('hex')}; ` +
