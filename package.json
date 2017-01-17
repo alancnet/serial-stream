@@ -1,6 +1,6 @@
 {
   "name": "serial-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Read and write from streams in a serial fashion",
   "main": "index.js",
   "directories": {
