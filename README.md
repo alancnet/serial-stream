@@ -10,7 +10,7 @@ for Node, using Promises.
 ### Writing streams
 
 ```javascript
-const SerialStreamWriter = require('serial-stream').SerialStreamWriter;
+const { SerialStreamWriter } = require('serial-stream');
 const stream = <Some Stream>;
 
 const writer = new SerialStreamWriter(stream);
@@ -35,15 +35,15 @@ value returned from the callback function will override what is resolved by the
 promise.
 
 ```javascript
-const SerialStreamReader = require('serial-stream').SerialStreamReader;
+const { SerialStreamReader } = require('serial-stream');
 const stream = <Some Stream>;
 
 const reader = new SerialStreamReader(stream);
 reader.readInt32LE((v) => console.log(v));
-reader.readDoubleLE().then(console.log);
-reader.readString((str) => str.toUpperCase())
-  .then((str) => console.log(str)); // "HELLO WORLD"
-reader.readJson().then((obj) => console.log(obj.text)) // "Hello World"
+console.log(await reader.readDoubleLE());
+console.log(await reader.readString((str) => str.toUpperCase())) // "HELLO WORLD"
+const obj = await reader.readJson();
+console.log(obj.text) // "Hello World"
 ```
 
 #### Promise vs. callback

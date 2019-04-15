@@ -43,4 +43,13 @@ class SerialStreamReader{
   }
 }
 
+SerialStreamReader.prototype.readDouble = SerialStreamReader.prototype.readDoubleLE
+SerialStreamReader.prototype.readFloat = SerialStreamReader.prototype.readFloatLE
+SerialStreamReader.prototype.readInt16 = SerialStreamReader.prototype.readInt16LE
+SerialStreamReader.prototype.readInt32 = SerialStreamReader.prototype.readInt32LE
+SerialStreamReader.prototype.readInt = SerialStreamReader.prototype.readIntLE
+SerialStreamReader.prototype.readUInt16 = SerialStreamReader.prototype.readUInt16LE
+SerialStreamReader.prototype.readUInt32 = SerialStreamReader.prototype.readUInt32LE
+SerialStreamReader.prototype.readUInt = SerialStreamReader.prototype.readUIntLE
+
 module.exports = SerialStreamReader;

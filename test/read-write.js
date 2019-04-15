@@ -1,5 +1,4 @@
 const assert = require('chai').assert;
-const memoryStreams = require('memory-streams');
 const SerialStreamReader = require('../serial-stream-reader');
 const SerialStreamWriter = require('../serial-stream-writer');
 const stream = require('stream');

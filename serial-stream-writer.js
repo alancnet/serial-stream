@@ -48,4 +48,13 @@ class SerialStreamWriter {
   }
 }
 
+SerialStreamWriter.prototype.writeDouble = SerialStreamWriter.prototype.writeDoubleLE
+SerialStreamWriter.prototype.writeFloat = SerialStreamWriter.prototype.writeFloatLE
+SerialStreamWriter.prototype.writeInt16 = SerialStreamWriter.prototype.writeInt16LE
+SerialStreamWriter.prototype.writeInt32 = SerialStreamWriter.prototype.writeInt32LE
+SerialStreamWriter.prototype.writeInt = SerialStreamWriter.prototype.writeIntLE
+SerialStreamWriter.prototype.writeUInt16 = SerialStreamWriter.prototype.writeUInt16LE
+SerialStreamWriter.prototype.writeUInt32 = SerialStreamWriter.prototype.writeUInt32LE
+SerialStreamWriter.prototype.writeUInt = SerialStreamWriter.prototype.writeUIntLE
+
 module.exports = SerialStreamWriter;

@@ -1,6 +1,6 @@
 {
   "name": "serial-stream",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Read and write from streams in a serial fashion",
   "main": "index.js",
   "directories": {
@@ -29,7 +29,6 @@
   "homepage": "https://github.com/alancnet/serial-stream#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "memory-streams": "^0.1.0",
     "mocha": "^3.1.2"
   }
 }
